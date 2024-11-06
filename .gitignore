@@ -1,4 +1,8 @@
 
 .idea
-./config.env
+config.env
 /vendor/**
+/logs/**
+!/logs/.gitkeep
+/metrics/**
+!/metrics/.gitkeep
