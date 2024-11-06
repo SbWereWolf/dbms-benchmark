@@ -13,7 +13,7 @@ require_once($autoloaderPath);
 
 $pathComposer = new Path(__DIR__);
 
-$scriptPath = $pathComposer->make(['data-import.php']);
+$scriptPath = $pathComposer->make(['data-import-pgsql.php']);
 $metricsPath = $pathComposer->make(
     [
         'metrics',
