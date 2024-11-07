@@ -1,5 +1,6 @@
 <?php
 
+use SbWereWolf\Scripting\Config\EnvReader;
 use SbWereWolf\Scripting\FileSystem\Path;
 
 
@@ -20,9 +21,12 @@ $metricsPath = $pathComposer->make(
 );
 $metricsDescriptor = fopen($metricsPath, "w");
 
+$configPath = $pathComposer->make(['mysql-config.env']);
+(new EnvReader($configPath))->defineConstants();
+
 $scriptPath = $pathComposer->make(['data-import-mysql.php']);
 
-for ($i = 0; $i < 3; $i++) {
+for ($i = 0; $i < (int)constant('SCRIPT_RUN_NUMBERS'); $i++) {
     $scriptStartAt = time();
 
     require($scriptPath);
