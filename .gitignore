@@ -6,3 +6,4 @@
 !/logs/.gitkeep
 /metrics/**
 !/metrics/.gitkeep
+/data/**
