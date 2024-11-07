@@ -5,15 +5,13 @@ use SbWereWolf\Scripting\FileSystem\Path;
 
 $benchStartAt = time();
 $message = "Benchmark start at {$benchStartAt}";
-echo $message;
+echo $message . PHP_EOL;
 
 $pathParts = [__DIR__, 'vendor', 'autoload.php'];
 $autoloaderPath = join(DIRECTORY_SEPARATOR, $pathParts);
 require_once($autoloaderPath);
 
 $pathComposer = new Path(__DIR__);
-
-$scriptPath = $pathComposer->make(['data-import-pgsql.php']);
 $metricsPath = $pathComposer->make(
     [
         'metrics',
@@ -21,6 +19,8 @@ $metricsPath = $pathComposer->make(
     ]
 );
 $metricsDescriptor = fopen($metricsPath, "w");
+
+$scriptPath = $pathComposer->make(['data-import-pgsql.php']);
 
 for ($i = 0; $i < 3; $i++) {
     $scriptStartAt = time();
@@ -39,4 +39,4 @@ $benchFinishAt = time();
 
 $benchDuration = $benchFinishAt - $benchStartAt;
 $message = "Benchmark duration is $benchDuration";
-echo $message;
+echo $message . PHP_EOL;

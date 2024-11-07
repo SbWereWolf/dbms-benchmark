@@ -41,7 +41,7 @@ $logger->pushProcessor(function ($record) {
 
 $logger->notice($message);
 
-$configPath = $pathComposer->make(['pgsql-config.env']);
+$configPath = $pathComposer->make(['mysql-config.env']);
 (new EnvReader($configPath))->defineConstants();
 
 $connection = (new PDO(
@@ -49,8 +49,6 @@ $connection = (new PDO(
     constant('LOGIN'),
     constant('PASSWORD'),
 ));
-$schema = constant('SCHEMA');
-$connection->exec("SET search_path TO {$schema}");
 
 $directory = constant('XML_FILES_PATH');
 $command = new ImportCommand($connection, $logger, $directory);
