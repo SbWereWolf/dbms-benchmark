@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "97470f42e1e7ea792e8755d12e00ebdb",
+    "content-hash": "6c013d0bb8fc5b2cca4dab536df5d05b",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -159,16 +159,16 @@
         },
         {
             "name": "sbwerewolf/batch-file-scripting",
-            "version": "v2.0.2",
+            "version": "v3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SbWereWolf/batch-file-scripting.git",
-                "reference": "7976ae57edb67c7b81b7f6f00d85869c22d50be4"
+                "reference": "3f225e8576a136d58f5754db79a4e820d6ec6ea6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SbWereWolf/batch-file-scripting/zipball/7976ae57edb67c7b81b7f6f00d85869c22d50be4",
-                "reference": "7976ae57edb67c7b81b7f6f00d85869c22d50be4",
+                "url": "https://api.github.com/repos/SbWereWolf/batch-file-scripting/zipball/3f225e8576a136d58f5754db79a4e820d6ec6ea6",
+                "reference": "3f225e8576a136d58f5754db79a4e820d6ec6ea6",
                 "shasum": ""
             },
             "require": {
@@ -196,22 +196,22 @@
             "description": "Kit of utility classes for batch file scripting",
             "support": {
                 "issues": "https://github.com/SbWereWolf/batch-file-scripting/issues",
-                "source": "https://github.com/SbWereWolf/batch-file-scripting/tree/v2.0.2"
+                "source": "https://github.com/SbWereWolf/batch-file-scripting/tree/v3.0.4"
             },
-            "time": "2023-02-11T23:39:38+00:00"
+            "time": "2024-11-07T00:24:13+00:00"
         },
         {
             "name": "sbwerewolf/fias-gar-data-import-tool",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SbWereWolf/fias-gar-data-import-tool.git",
-                "reference": "b5f8c60cab50c538ebb095c75e69c71f2443938e"
+                "reference": "e927da3a0db4df495f3bcde272915921df454fa9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SbWereWolf/fias-gar-data-import-tool/zipball/b5f8c60cab50c538ebb095c75e69c71f2443938e",
-                "reference": "b5f8c60cab50c538ebb095c75e69c71f2443938e",
+                "url": "https://api.github.com/repos/SbWereWolf/fias-gar-data-import-tool/zipball/e927da3a0db4df495f3bcde272915921df454fa9",
+                "reference": "e927da3a0db4df495f3bcde272915921df454fa9",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
                 "ext-pdo": "*",
                 "ext-xmlreader": "*",
                 "psr/log": "^3.0",
-                "sbwerewolf/batch-file-scripting": "^2.0",
+                "sbwerewolf/batch-file-scripting": "^3.0",
                 "sbwerewolf/json-serialize-trait": "^1.0"
             },
             "require-dev": {
@@ -247,29 +247,29 @@
             "description": "Tool to import FIAS GAR database",
             "support": {
                 "issues": "https://github.com/SbWereWolf/fias-gar-data-import-tool/issues",
-                "source": "https://github.com/SbWereWolf/fias-gar-data-import-tool/tree/v1.0.2"
+                "source": "https://github.com/SbWereWolf/fias-gar-data-import-tool/tree/v1.0.3"
             },
-            "time": "2023-01-26T19:38:37+00:00"
+            "time": "2024-11-07T19:58:10+00:00"
         },
         {
             "name": "sbwerewolf/fias-gar-schema-deploy-tool",
-            "version": "v2.0.5",
+            "version": "v2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SbWereWolf/fias-gar-schema-deploy-tool.git",
-                "reference": "a73826d84a3e247703c335111ea1c2f03f736486"
+                "reference": "4a1577c17f47cfda26406b3c587ea08b3fe3ea64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SbWereWolf/fias-gar-schema-deploy-tool/zipball/a73826d84a3e247703c335111ea1c2f03f736486",
-                "reference": "a73826d84a3e247703c335111ea1c2f03f736486",
+                "url": "https://api.github.com/repos/SbWereWolf/fias-gar-schema-deploy-tool/zipball/4a1577c17f47cfda26406b3c587ea08b3fe3ea64",
+                "reference": "4a1577c17f47cfda26406b3c587ea08b3fe3ea64",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-pdo": "*",
                 "psr/log": "^3.0",
-                "sbwerewolf/batch-file-scripting": "^2.0",
+                "sbwerewolf/batch-file-scripting": "^3.0",
                 "sbwerewolf/json-serialize-trait": "^1.0"
             },
             "require-dev": {
@@ -296,9 +296,9 @@
             "description": "Kit of templates and scripts to deploy FIAS GAR database",
             "support": {
                 "issues": "https://github.com/SbWereWolf/fias-gar-schema-deploy-tool/issues",
-                "source": "https://github.com/SbWereWolf/fias-gar-schema-deploy-tool/tree/v2.0.5"
+                "source": "https://github.com/SbWereWolf/fias-gar-schema-deploy-tool/tree/v2.0.6"
             },
-            "time": "2023-02-10T23:52:02+00:00"
+            "time": "2024-11-07T20:01:51+00:00"
         },
         {
             "name": "sbwerewolf/json-serialize-trait",
@@ -346,10 +346,12 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {
+        "ext-pdo": "*"
+    },
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

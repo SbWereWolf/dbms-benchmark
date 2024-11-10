@@ -7,7 +7,7 @@ use SbWereWolf\FiasGarDataImport\Cli\ImportCommand;
 use SbWereWolf\FiasGarDataImport\Cli\ImportOptions;
 use SbWereWolf\FiasGarDataImport\Import\Processor\AddressObjects;
 use SbWereWolf\Scripting\Config\EnvReader;
-use SbWereWolf\Scripting\Convert\DurationPrinter;
+use SbWereWolf\Scripting\Convert\NanosecondsConverter;
 use SbWereWolf\Scripting\FileSystem\Path;
 
 $startMoment = hrtime(true);
@@ -91,8 +91,8 @@ foreach (
         $finish = hrtime(true);
         $duration = $finish - $start;
 
-        $timeParts = new DurationPrinter();
-        $printout = $timeParts->printNanoseconds($duration);
+        $timeParts = new NanosecondsConverter();
+        $printout = $timeParts->print($duration);
         $formatted = number_format($rowsRead, 0, ',', ' ');
         $scriptAllocated = memory_get_usage(true) / 1024 / 1024;
 
@@ -116,8 +116,8 @@ if ($hasTransaction) {
     $finish = hrtime(true);
     $duration = $finish - $start;
 
-    $timeParts = new DurationPrinter();
-    $printout = $timeParts->printNanoseconds($duration);
+    $timeParts = new NanosecondsConverter();
+    $printout = $timeParts->print($duration);
     $formatted = number_format($rowsRead, 0, ',', ' ');
     $scriptAllocated = memory_get_usage(true) / 1024 / 1024;
 
@@ -144,8 +144,8 @@ $logger->notice($message);
 $finishMoment = hrtime(true);
 
 $totalTime = $finishMoment - $startMoment;
-$timeParts = new DurationPrinter();
-$printout = $timeParts->printNanoseconds($totalTime);
+$timeParts = new NanosecondsConverter();
+$printout = $timeParts->print($totalTime);
 
 $message = "Import duration is $printout";
 $logger->notice($message);
